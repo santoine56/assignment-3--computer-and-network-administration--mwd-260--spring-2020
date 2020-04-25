@@ -16,9 +16,9 @@ ssh roy@user-bauhaus.cs.hartford.edu
 Write a script that recursively copies all the files in one folder to another folder. The names of both folders should be arguments to the script. (_`12` pts_)
 
 ```
-SOURCE="./green"
-DESTINATION="./blue"
-cp r
+SOURCE="blue blue.txt"
+BACK_UP="blue_backup"
+cp -r blue blue_backup
 ```
 
 ### Question 2
@@ -31,6 +31,7 @@ Write a script that checks whether a program exists on your machine. If it doesn
 Write a command that will create an empty file with a `.txt` extension named after the current folder. (_`12` pts_)
 
 ```
+
 ```
 
 ### Question 4
@@ -44,7 +45,7 @@ find . -name "*.thumbs" -type f -delete
 Write a command that will recursively remove empty folders from the current folder. (_`12` pts_)
 
 ```
-find
+rmdir
 ```
 
 ### Question 6
