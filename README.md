@@ -16,8 +16,9 @@ ssh roy@user-bauhaus.cs.hartford.edu
 Write a script that recursively copies all the files in one folder to another folder. The names of both folders should be arguments to the script. (_`12` pts_)
 
 ```
-SOURCE="blue blue.txt"
-BACK_UP="blue_backup"
+#!/bin/bash
+SOURCE="$/tmp/ blue.txt"
+BACK_UP="$/blue_backup"
 cp -r blue blue_backup
 ```
 
@@ -25,13 +26,15 @@ cp -r blue blue_backup
 Write a script that checks whether a program exists on your machine. If it doesn’t, it should try to fetch the program via `apt install`. (_`12` pts_)
 
 ```
+#!/bin/bash
+
 ```
 
 ### Question 3
 Write a command that will create an empty file with a `.txt` extension named after the current folder. (_`12` pts_)
 
 ```
-
+touch .txt
 ```
 
 ### Question 4
@@ -52,12 +55,27 @@ rmdir
 Write a script that reports every file name in a folder as two items: the filename and its extension. Each item should appear on a new line. (_`12` pts_)
 
 ```
+#!/bin/bash
+
 ```
 
 ### Question 7
 Write a script that requests the user answer `y` or `n` to a prompt, and only exits when either of the two responses is entered. The user’s response should be echoed to the screen _before_ the program exits. (_`28` pts_)
 
 ```
+#!/bin/bash
+read -p "Have you completed your program? Enter y or n: " answer
+case "$ANSWER" in
+    [yY] | [yY] [eE] [sS])
+      echo "$ANSWER" ; exit 0
+      ;;
+    [nN] | [nN] [oO] )
+      echo "$ANSWER" ; exit 0
+      ;;
+  *)
+      echo "Invalid input."
+      ;;
+esac
 ```
 
 ## ❖・Due・❖
