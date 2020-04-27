@@ -40,7 +40,7 @@ fi
 Write a command that will create an empty file with a `.txt` extension named after the current folder. (_`12` pts_)
 
 ```
-touch blue.txt
+touch home.txt
 ```
 
 ### Question 4
