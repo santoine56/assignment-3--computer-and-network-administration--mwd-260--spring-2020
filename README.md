@@ -27,6 +27,13 @@ Write a script that checks whether a program exists on your machine. If it doesn
 
 ```
 #!/bin/bash
+if [ "$(which git)" = "" ]
+then
+    echo "git is installed"
+else
+    echo "git is not installed. Installing git..."
+    sudo apt install git
+fi
 
 ```
 
@@ -34,7 +41,7 @@ Write a script that checks whether a program exists on your machine. If it doesn
 Write a command that will create an empty file with a `.txt` extension named after the current folder. (_`12` pts_)
 
 ```
-touch .txt
+touch blue.txt
 ```
 
 ### Question 4
